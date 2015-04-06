@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Perform random acts of kindness in honor of Austin.">
+	<meta name="keywords" content="Austin,Hicks,Austin Hicks,kindness,kindness project,acts of kindness,random acts of kindness,memorial,in memory of,child,DVLC,Desert View, Desert View Learning Center">
+	<title>Share Your Story - Austin's Kindness Project</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+</head>
+<body>
+	<div class="main-header">
+		<h1 class="main-header__title">Austin's Kindness Project</h1>
+		<div class="nav">
+			<ul class="nav__list">
+				<li class="nav__list__item"><a href="/">Home</a></li>
+				<li class="nav__list__item is-selected"><a href="/stories">Stories</a></li>
+				<li class="nav__list__item"><a href="/share">Share Your Story</a></li>
+				<li class="nav__list__item"><a href="/about">About Austin</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main-body">
+		<h2 class="main-body__title">Share Your Story</h2>
+		<p class="main-body__text">
+			Have you received an act of kindness in Austin's memory? Or, have you performed an act of kindness in Austin's memory? On this page, you can share your story.
+		</p>
+		<form class="story-form" method="post" action="/story"
+			  onsubmit="return publishStory(document.getElementById('story-form__text').text)">
+			<textarea class="story-form__text" id="story-form__text" placeholder="Type your story here."></textarea>
+			<input class="story-form__button js-form-submit-button" type="button" value="Submit Story" />
+		</form>
+	</div>
+	<div id="dialog-message-success" title="Success">
+		<p>
+			<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+			Your story has been saved and published.
+		</p>
+		<p>
+			To read all the stories that have been published so far, please visit the <a href="/Stories">Stories</a> page.
+		</p>
+	</div>
+	<div id="dialog-message-error" title="Warning">
+		<p>
+			<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 50px 0;"></span>
+			An unexpected error occurred while trying to publish your story. It may be a problem with the web server or with your internet connection.
+			Please try again.
+		</p>
+	</div>
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/share.js"></script>
+</body>
+</html>

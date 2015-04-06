@@ -1,0 +1,26 @@
+/* 	@group pager 
+	These rules manage the hiding/unhiding of sub-sections at run-time.
+	@usage parent node .role-pager has child nodes .role-page, each with a unique id. the parent node's data-current-page attribute should be set to the id of the child to be displayed.
+*/
+.role-pager > .role-page {
+	display: none;
+}
+.role-pager[data-current-page=home] > #home.role-page,
+.role-pager[data-current-page=share] > #share.role-page,
+.role-pager[data-current-page=how] > #how.role-page {
+	display: block;
+}
+
+/*	@group status-specific content
+	These rules manage the hiding/unhiding of sub-sections that are status-specific.
+	@usage parent node .role-has-status has child nodes .role-for-status, each with a unique status-XXXX class (where XXXX = error|wait|empty|success). The parent node's data-status attribute should be set to the XXXX of the child to be displayed.
+*/
+.role-has-status > .role-for-status {
+	display: none;
+}
+.role-has-status[data-status=error] > .role-for-status.status-error,
+.role-has-status[data-status=wait] > .role-for-status.status-wait,
+.role-has-status[data-status=empty] > .role-for-status.status-empty,
+.role-has-status[data-status=success] > .role-for-status.status-success {
+	display: block;
+}
