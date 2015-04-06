@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/myappdatabase');
+mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL);
 var storySchema = new mongoose.Schema({
     date: Date,
     body: String
