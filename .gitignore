@@ -4,3 +4,6 @@
 *.ipr
 *.iws
 
+# misc
+todo.txt
+*.docx
